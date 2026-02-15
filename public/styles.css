@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.display-container {
+    background: #f8f9fa;
+    padding: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.expression {
+    font-size: 16px;
+    color: #6c757d;
+    min-height: 24px;
+    margin-bottom: 8px;
+}
+
+.display {
+    font-size: 48px;
+    font-weight: 300;
+    color: #212529;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-align: right;
+    width: 100%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #e9ecef;
+    padding: 1px;
+}
+
+.btn {
+    padding: 25px;
+    font-size: 20px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #f8f9fa;
+    transform: scale(0.98);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-number {
+    color: #212529;
+}
+
+.btn-operator {
+    color: #667eea;
+    font-weight: 600;
+}
+
+.btn-function {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.btn-equals {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.btn-equals:hover {
+    background: linear-gradient(135deg, #5568d3 0%, #65408b 100%);
+}
+
+.btn-advanced {
+    background: #f8f9fa;
+    color: #495057;
+    font-size: 16px;
+}
+
+.btn-zero {
+    grid-column: span 1;
+}
+
+.history {
+    padding: 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history h3 {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.history-item {
+    padding: 8px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #495057;
+}
+
+.history-item .result {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .display {
+        font-size: 36px;
+    }
+    
+    .btn {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+/* 滚动条美化 */
+.history::-webkit-scrollbar {
+    width: 6px;
+}
+
+.history::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.history::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+    background: #5568d3;
+}
