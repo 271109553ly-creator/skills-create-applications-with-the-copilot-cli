@@ -7,6 +7,11 @@
  * - Multiplication (×): Multiply two numbers together
  * - Division (÷): Divide first number by second number
  * 
+ * Advanced Operations:
+ * - Modulo (%): Calculate remainder of division
+ * - Exponentiation (^): Raise base to exponent power
+ * - Square Root (√): Calculate square root of a number
+ * 
  * This calculator implements the four fundamental arithmetic operations
  * as shown in the calculator interface.
  */
@@ -55,10 +60,50 @@ function divide(a, b) {
   return a / b;
 }
 
+/**
+ * Modulo - Returns the remainder of a divided by b
+ * @param {number} a - Dividend
+ * @param {number} b - Divisor
+ * @returns {number} Remainder of a divided by b
+ * @throws {Error} If divisor is zero
+ */
+function modulo(a, b) {
+  if (b === 0) {
+    throw new Error('Modulo by zero is not allowed');
+  }
+  return a % b;
+}
+
+/**
+ * Power - Returns base raised to the exponent
+ * @param {number} base - Base number
+ * @param {number} exponent - Power to raise base to
+ * @returns {number} Result of base^exponent
+ */
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+/**
+ * Square Root - Returns the square root of n
+ * @param {number} n - Number to calculate square root of
+ * @returns {number} Square root of n
+ * @throws {Error} If n is negative
+ */
+function squareRoot(n) {
+  if (n < 0) {
+    throw new Error('Cannot calculate square root of a negative number');
+  }
+  return Math.sqrt(n);
+}
+
 // Export functions for use in other modules
 module.exports = {
   add,
   subtract,
   multiply,
-  divide
+  divide,
+  modulo,
+  power,
+  squareRoot
 };
