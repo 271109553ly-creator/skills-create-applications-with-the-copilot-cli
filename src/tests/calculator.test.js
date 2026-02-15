@@ -195,7 +195,7 @@ describe('Calculator - Input Validation', () => {
   });
 
   test('should handle unknown operations', () => {
-    expect(() => runCalculator('power', 2, 3)).toThrow();
+    expect(() => runCalculator('invalid', 2, 3)).toThrow();
     expect(() => runCalculator('unknown', 10, 3)).toThrow();
   });
 });
