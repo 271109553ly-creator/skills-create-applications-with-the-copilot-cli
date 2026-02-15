@@ -67,7 +67,7 @@ function modulo(a, b) {
  * @returns {number} Result of base raised to exponent
  */
 function power(base, exponent) {
-  return Math.pow(base, exponent);
+  return base ** exponent;
 }
 
 /**
