@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧮 交互式计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="header">
+                <h1>🧮 交互式计算器</h1>
+            </div>
+            
+            <div class="display-container">
+                <div class="expression" id="expression"></div>
+                <div class="display" id="display">0</div>
+            </div>
+
+            <div class="buttons">
+                <!-- 第一行：清除和特殊操作 -->
+                <button class="btn btn-function" onclick="clearDisplay()">C</button>
+                <button class="btn btn-function" onclick="clearEntry()">CE</button>
+                <button class="btn btn-function" onclick="backspace()">⌫</button>
+                <button class="btn btn-operator" onclick="appendOperator('/')">÷</button>
+
+                <!-- 第二行：数字7-9和乘法 -->
+                <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+                <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+                <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+                <button class="btn btn-operator" onclick="appendOperator('*')">×</button>
+
+                <!-- 第三行：数字4-6和减法 -->
+                <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+                <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+                <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+                <button class="btn btn-operator" onclick="appendOperator('-')">-</button>
+
+                <!-- 第四行：数字1-3和加法 -->
+                <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+                <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+                <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+                <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+
+                <!-- 第五行：0、小数点和等号 -->
+                <button class="btn btn-number btn-zero" onclick="appendNumber('0')">0</button>
+                <button class="btn btn-number" onclick="appendDecimal()">.</button>
+                <button class="btn btn-equals" onclick="calculate()">=</button>
+
+                <!-- 高级操作行 -->
+                <button class="btn btn-advanced" onclick="appendOperator('%')">MOD</button>
+                <button class="btn btn-advanced" onclick="appendOperator('^')">x^y</button>
+                <button class="btn btn-advanced" onclick="calculateSquareRoot()">√</button>
+                <button class="btn btn-advanced" onclick="toggleSign()">±</button>
+            </div>
+
+            <div class="history">
+                <h3>计算历史</h3>
+                <div id="history-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

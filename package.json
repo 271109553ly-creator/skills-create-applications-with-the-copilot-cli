@@ -4,6 +4,10 @@
   "description": "<img src=\"https://octodex.github.com/images/Professortocat_v2.png\" align=\"right\" height=\"200px\" />",
   "main": "index.js",
   "scripts": {
+    "start": "node cli.js",
+    "calc": "node cli.js",
+    "web": "node server.js",
+    "gui": "node server.js",
     "test": "jest",
     "test:verbose": "jest --verbose",
     "test:watch": "jest --watch"
