@@ -1,0 +1,22 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "A Node.js calculator application with comprehensive test suite",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "jest",
+    "test:verbose": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "calculator",
+    "math",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
